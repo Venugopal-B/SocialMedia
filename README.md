@@ -91,29 +91,44 @@ Here are some screenshots illustrating the user interface and various features o
 ### Screenshots 
 ![Home Page](/Resources/Screenshot1.jpg)
 
-
 ![User Profile](/Resources/Screenshot(170).jpg)
 
 ![User Profile](/Resources/Screenshot(171).jpg)
+
 ![User Profile](/Resources/Screenshot(172).jpg)
+
 ![User Profile](/Resources/Screenshot(173).jpg)
+
 ![User Profile](/Resources/Screenshot(174).jpg)
+
 ![User Profile](/Resources/Screenshot(175).jpg)
+
 ![User Profile](/Resources/Screenshot(176).jpg)
+
 ![User Profile](/Resources/Screenshot(177).jpg)
+
 ![User Profile](/Resources/Screenshot(178).jpg)
+
 ![User Profile](/Resources/Screenshot(179).jpg)
+
 ![User Profile](/Resources/Screenshot(180).jpg)
+
 ![User Profile](/Resources/Screenshot(181).jpg)
+
 ![User Profile](/Resources/Screenshot(182).jpg)
+
 ![User Profile](/Resources/Screenshot(183).jpg)
+
 ![User Profile](/Resources/Screenshot(184).jpg)
+
 ![User Profile](/Resources/Screenshot(185).jpg)
+
 ![User Profile](/Resources/Screenshot(186).jpg)
+
 ![User Profile](/Resources/Screenshot(187).jpg)
 
 
-*(Include additional screenshots as needed)*
+
 
 ## Contributing
 
