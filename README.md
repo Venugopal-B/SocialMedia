@@ -26,7 +26,7 @@ Ensure you have the following installed on your machine:
 
 3. **Import SQL Source File:**
    - Download the SQL source file from the repository:
-     - **[Download SQL Source File](sql/schema.sql)**
+     - **[Download SQL Source File](/Resources/Social.sql)**
    - In pgAdmin, connect to your PostgreSQL server, and select the database you've created.
    - Open the Query Tool and load the SQL source file. Execute the script to set up your database schema and initial data.
 
@@ -88,13 +88,13 @@ Ensure you have the following installed on your machine:
 
 Here are some screenshots illustrating the user interface and various features of the application:
 
-### Home Page
+### Screenshots 
 ![Home Page](/Resources/Screenshot1.jpg)
 
-### User Profile
-![User Profile](screenshots/profile.png)
 
-### Post Interaction
+![User Profile](/Resources/Screenshot(170).jpg)
+
+
 ![Post Interaction](screenshots/post_interaction.png)
 
 *(Include additional screenshots as needed)*
