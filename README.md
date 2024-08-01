@@ -89,7 +89,7 @@ Ensure you have the following installed on your machine:
 Here are some screenshots illustrating the user interface and various features of the application:
 
 ### Home Page
-![Home Page](/Resources/Screenshot(169).jpg)
+![Home Page](/Resources/Screenshot (169).jpg)
 
 ### User Profile
 ![User Profile](screenshots/profile.png)
