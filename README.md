@@ -1,149 +1,121 @@
-# Full Stack Social Networking Website
+# Social Networking Website
 
 ## Overview
-This is a Full Stack Social Networking Website built using the PERN stack (PostgreSQL, Express.js, React.js, Node.js). The project includes a client-server architecture with the frontend in `Project2` and the backend in `Projects`. It supports user authentication, profile management, posting, and social interactions.
 
-## Folder Structure
-- **Project2**: Contains the React.js frontend application.
-- **Projects**: Contains the Node.js backend application.
-
-## Prerequisites
-Ensure you have the following installed on your machine:
-- Node.js (which includes npm)
-- PostgreSQL and pgAdmin (for managing your database)
-- Visual Studio Code (or any preferred code editor)
-
-## Getting Started
-
-### Database Setup
-
-1. **Install pgAdmin:**
-   - Download and install pgAdmin from the official website: [pgAdmin Downloads](https://www.pgadmin.org/download/).
-
-2. **Create a Database:**
-   - Open pgAdmin and connect to your PostgreSQL server.
-   - Create a new database for the project.
-
-3. **Import SQL Source File:**
-   - Download the SQL source file from the repository:
-     - **[Download SQL Source File](/Resources/Social.sql)**
-   - In pgAdmin, connect to your PostgreSQL server, and select the database you've created.
-   - Open the Query Tool and load the SQL source file. Execute the script to set up your database schema and initial data.
-
-4. **Configure Database Connection:**
-   - Open the `db.js` file located in the `Projects` folder.
-   - Update the file with your database details including `database name`, `username`, and `password`.
-
-### Project Setup
-
-1. **Download the Project:**
-   - Clone or download the project repository to your local machine.
-
-2. **Open the Project:**
-   - Open the project directory in Visual Studio Code.
-
-### Running the Client
-
-1. **Navigate to the Client Directory:**
-   - Open the terminal in Visual Studio Code.
-   - Navigate to the `Project2` directory:
-     ```bash
-     cd Project2
-     ```
-
-2. **Install Dependencies:**
-   - In the terminal, run the following command to install the necessary dependencies:
-     ```bash
-     npm install
-     ```
-
-3. **Run the Client:**
-   - To start the client development server, run:
-     ```bash
-     npm start
-     ```
-
-### Running the API
-
-1. **Navigate to the API Directory:**
-   - Open the terminal in Visual Studio Code.
-   - Navigate to the `Projects` directory:
-     ```bash
-     cd Projects
-     ```
-
-2. **Install Dependencies:**
-   - In the terminal, run the following command to install the necessary dependencies:
-     ```bash
-     npm install
-     ```
-
-3. **Run the API:**
-   - To start the API server, run:
-     ```bash
-     npm start
-     ```
-
-## Screenshots
-
-Here are some screenshots illustrating the user interface and various features of the application:
-
-### Screenshots 
-![Home Page](/Resources/Screenshot1.jpg)
-
-![User Profile](/Resources/Screenshot(170).jpg)
-
-![User Profile](/Resources/Screenshot(171).jpg)
-
-![User Profile](/Resources/Screenshot(172).jpg)
-
-![User Profile](/Resources/Screenshot(173).jpg)
-
-![User Profile](/Resources/Screenshot(174).jpg)
-
-![User Profile](/Resources/Screenshot(175).jpg)
-
-![User Profile](/Resources/Screenshot(176).jpg)
-
-![User Profile](/Resources/Screenshot(177).jpg)
-
-![User Profile](/Resources/Screenshot(178).jpg)
-
-![User Profile](/Resources/Screenshot(179).jpg)
-
-![User Profile](/Resources/Screenshot(180).jpg)
-
-![User Profile](/Resources/Screenshot(181).jpg)
-
-![User Profile](/Resources/Screenshot(182).jpg)
-
-![User Profile](/Resources/Screenshot(183).jpg)
-
-![User Profile](/Resources/Screenshot(184).jpg)
-
-![User Profile](/Resources/Screenshot(185).jpg)
-
-![User Profile](/Resources/Screenshot(186).jpg)
-
-![User Profile](/Resources/Screenshot(187).jpg)
-
-
-
-
-## Contributing
-
-Contributions are welcome! Please follow these steps to contribute:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature-name`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature/your-feature-name`).
-6. Open a pull request.
-
-## Contact
-
-For any questions or feedback, please reach out to the project maintainers.
+A full-stack social networking platform built with the PERN stack (PostgreSQL, Express.js, React.js, Node.js).  
+Features include user authentication, profile management, posting, commenting, likes, following, and dark mode.  
+Images are uploaded directly to Cloudinary for fast and reliable media hosting.
 
 ---
 
+## Tech Stack
+
+- **Frontend:** React, SCSS, React Context, React Query, Axios
+- **Backend:** Node.js, Express.js, JWT, dotenv
+- **Database:** PostgreSQL
+- **Image Hosting:** Cloudinary
+- **Authentication:** JWT (stored in HTTP-only cookies)
+- **State Management:** React Context API
+
+---
+
+## Features
+
+- User registration and login (JWT-based authentication)
+- Profile management (edit profile, upload profile/cover images)
+- Create, edit, and delete posts with image uploads
+- Like and comment on posts
+- Responsive design with dark mode toggle
+- Real-time UI updates using React Query
+
+---
+
+## Folder Structure
+
+```
+/
+├── Client     # React frontend
+├── Server     # Node.js backend
+└── README.md
+```
+<!-- ├── Resources     # SQL and screenshots -->
+---
+
+## Setup Instructions
+
+### 1. Database
+
+- Install PostgreSQL and pgAdmin.
+- Create a new database.
+<!-- - Import the provided SQL file from `/Resources/Social.sql` using pgAdmin. -->
+
+### 2. Backend
+
+```bash
+cd Server
+npm install
+```
+
+- Configure your database connection in `db.js`.
+- Create a `.env` file in the `Server` folder with:
+  ```
+  JWT_SECRET=your_secret_key
+  CLOUDINARY_CLOUD_NAME=your_cloud_name
+  CLOUDINARY_API_KEY=your_api_key
+  CLOUDINARY_API_SECRET=your_api_secret
+  ```
+- Start the backend:
+  ```bash
+  npm start
+  ```
+
+### 3. Frontend
+
+```bash
+cd Client
+npm install
+npm start
+```
+
+---
+
+## Usage
+
+- Register a new account or log in.
+- Create posts with images (uploaded to Cloudinary).
+- Like, comment, and follow other users.
+- Edit your profile and switch between dark/light mode.
+
+---
+
+## Dark Mode
+
+- Toggle dark mode from the navbar.
+- Theme preference is managed via React Context and saved in localStorage.
+- SCSS applies styles based on the current theme.
+
+---
+
+<!-- ## Screenshots
+
+![Home Page](/Resources/Screenshot1.jpg)
+![Profile Page](/Resources/Screenshot(170).jpg) -->
+<!-- Add more screenshots as needed -->
+
+---
+
+<!-- ## Contributing
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Commit your changes.
+4. Push and open a pull request. -->
+
+---
+
+## License
+
+This project is for educational purposes.
+
+---
 Happy coding! 🚀
