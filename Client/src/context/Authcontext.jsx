@@ -47,7 +47,7 @@ export const AuthContextProvider = ({ children }) => {
       const res = await makeRequest.post("auth/login", inputs);
       setCurrentUser(res.data);
       localStorage.setItem("user", JSON.stringify(res.data));
-      console.log(res.data);
+      
     } catch (err) {
       console.error("Login error:", err);
     }

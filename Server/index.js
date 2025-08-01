@@ -19,9 +19,10 @@ app.use((req, res, next) => {
 })
 app.use(bodyParser.json());
 app.use(cors({
-    origin: "http://localhost:5173", // or your frontend URL
-    credentials: true
+    origin: ["http://localhost:5173", "https://social-media-two-kohl.vercel.app"],
+    credentials: true,
 }));
+
 app.use(cookieParser());
 
 // const storage = multer.diskStorage({

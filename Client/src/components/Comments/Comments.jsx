@@ -34,7 +34,7 @@ const Comments = ({ postId }) => {
     setDesc("");
     
   };
-
+   
   return (
     <div className="comments">
       <div className="write">
@@ -45,7 +45,8 @@ const Comments = ({ postId }) => {
       {isLoading
         ? "loading"
         : data.map((comment) => (
-            <div className="comment">
+         
+            <div key={comment.id} className="comment">
               <img src={"/upload/"+comment.profilepic} alt="" />
               <div className="info">
                 <span>{comment.name}</span>
