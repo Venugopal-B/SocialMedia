@@ -7,6 +7,7 @@ import {
   RouterProvider,
   useNavigate,
 } from "react-router-dom";
+import { makeRequest } from "../../axios.js";
 const Register = () => {
   const navigate = useNavigate();
   const [inputs, setInputs] = useState({
@@ -27,7 +28,7 @@ const Register = () => {
     e.preventDefault()
 
     try {
-      await axios.post("http://localhost:3000/api/auth/register", inputs)
+      await makeRequest.post("auth/register", inputs);
       navigate("/Login");
     } catch (err) {
       setErr(err.response.data);

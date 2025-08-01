@@ -33,6 +33,7 @@
 
 import { useEffect, useState, createContext } from "react";
 import axios from "axios";
+import { makeRequest } from "../axios";
 
 export const AuthContext = createContext();
 
@@ -43,28 +44,22 @@ export const AuthContextProvider = ({ children }) => {
 
   const login = async (inputs) => {
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/login", inputs, {
-        withCredentials: true,
-      });
+      const res = await makeRequest.post("auth/login", inputs);
       setCurrentUser(res.data);
       localStorage.setItem("user", JSON.stringify(res.data));
       console.log(res.data);
     } catch (err) {
       console.error("Login error:", err);
-      // Optionally handle error
     }
   };
 
   const logout = async () => {
     try {
-      await axios.post("http://localhost:3000/api/auth/logout", {}, {
-        withCredentials: true,
-      });
+      await makeRequest.post("auth/logout");
       setCurrentUser(null);
       localStorage.removeItem("user");
     } catch (err) {
       console.error("Logout error:", err);
-      // Optionally handle error
     }
   };
 

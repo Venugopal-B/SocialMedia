@@ -18,12 +18,10 @@ app.use((req, res, next) => {
     next()
 })
 app.use(bodyParser.json());
-app.use(cors(
-    {
-        origin: "http://localhost:5173",
-
-    }
-));
+app.use(cors({
+    origin: "http://localhost:5173", // or your frontend URL
+    credentials: true
+}));
 app.use(cookieParser());
 
 // const storage = multer.diskStorage({

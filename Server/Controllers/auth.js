@@ -1,8 +1,9 @@
 import { db } from "../connect.js"
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
-dotenv.config();
+
+// Remove dotenv config and use a hardcoded secret for demonstration
+const JWT_SECRET = "PasswordLess";
 
 export const register = async (req, res) => {
   try {
@@ -30,7 +31,6 @@ export const register = async (req, res) => {
 
 
 
-
 export const login = async (req, res) => {
   const q = "SELECT * FROM  users WHERE username = $1";
 
@@ -43,10 +43,12 @@ export const login = async (req, res) => {
     const checkPassword = await bcrypt.compare(req.body.password, rows[0].password);
     if (!checkPassword) return res.status(400).json("Wrong password or username!");
 
-    const token = jwt.sign({ id: rows[0].id }, process.env.JWT_SECRET); // correct!
+    const token = jwt.sign({ id: rows[0].id }, JWT_SECRET); // Use hardcoded secret
     const { password, ...others } = rows[0];
     res.cookie("accessToken", token, {
       httpOnly: true,
+      secure: true,
+      sameSite: "none"
     }).status(200).json(others);
 
   } catch (error) {
@@ -56,8 +58,8 @@ export const login = async (req, res) => {
 }
 export const logout = (req, res) => {
 
-  res.clearCookie("accessToken",{
-    secure:true,
-    sameSite:"none"
+  res.clearCookie("accessToken", {
+    secure: true,
+    sameSite: "none"
   }).status(200).json("User has been logged out")
 }

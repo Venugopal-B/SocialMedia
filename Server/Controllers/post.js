@@ -1,7 +1,7 @@
 import { db } from "../connect.js";
 import jwt from "jsonwebtoken";
 import moment from "moment";
-import {v2 as cloudinary} from "cloudinary"; // Import your cloudinary config
+import { v2 as cloudinary } from "cloudinary"; // Import your cloudinary config
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -74,26 +74,26 @@ export const addPost = async (req, res) => {
 
 
 export const deletePost = async (req, res) => {
-    const token = req.cookies.accessToken;
-    if (!token) return res.status(401).json("Not logged in!");
+   const token = req.cookies.accessToken;
+   if (!token) return res.status(401).json("Not logged in!");
 
-    jwt.verify(token, process.env.JWT_SECRET, async (err, userInfo) => {
-        if (err) return res.status(403).json("Token Not Valid!");
+   jwt.verify(token, process.env.JWT_SECRET, async (err, userInfo) => {
+      if (err) return res.status(403).json("Token Not Valid!");
 
-        const q = `DELETE FROM posts WHERE id=$1 AND userid=$2`;
+      const q = `DELETE FROM posts WHERE id=$1 AND userid=$2`;
 
-        try {
-            const { rowCount } = await db.query(q, [req.params.id, userInfo.id]);
+      try {
+         const { rowCount } = await db.query(q, [req.params.id, userInfo.id]);
 
-            // Check if any rows were affected
-            if (rowCount > 0) {
-                return res.status(200).json("Post deleted successfully.");
-            }
+         // Check if any rows were affected
+         if (rowCount > 0) {
+            return res.status(200).json("Post deleted successfully.");
+         }
 
-            return res.status(403).json("You can delete only your own posts.");
-        } catch (error) {
-            console.error(error);
-            return res.status(500).json("An error occurred while trying to delete the post.");
-        }
-    });
+         return res.status(403).json("You can delete only your own posts.");
+      } catch (error) {
+         console.error(error);
+         return res.status(500).json("An error occurred while trying to delete the post.");
+      }
+   });
 };

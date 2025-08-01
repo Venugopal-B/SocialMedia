@@ -7,7 +7,7 @@ const Posts = ({ userId }) => {
     const { isLoading, error, data } = useQuery({
         queryKey: userId ? ['posts', userId] : ['posts'], // Differentiate cache keys based on userId
         queryFn: () => {
-            const endpoint = userId ? `/posts?userId=${userId}` : '/posts';
+            const endpoint = userId ? `posts?userId=${userId}` : 'posts';
             return makeRequest.get(endpoint).then((res) => res.data);
         },
         enabled: true // Always run the query, regardless of userId presence
