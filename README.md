@@ -36,9 +36,9 @@ Images are uploaded directly to Cloudinary for fast and reliable media hosting.
 /
 ├── Client     # React frontend
 ├── Server     # Node.js backend
+├── Resources     # SQL and screenshots
 └── README.md
 ```
-<!-- ├── Resources     # SQL and screenshots -->
 ---
 
 ## Setup Instructions
@@ -47,7 +47,7 @@ Images are uploaded directly to Cloudinary for fast and reliable media hosting.
 
 - Install PostgreSQL and pgAdmin.
 - Create a new database.
-<!-- - Import the provided SQL file from `/Resources/Social.sql` using pgAdmin. -->
+- Import the provided SQL file from `/Resources/Social.sql` using pgAdmin.
 
 ### 2. Backend
 
@@ -96,20 +96,20 @@ npm start
 
 ---
 
-<!-- ## Screenshots
+## Screenshots
 
 ![Home Page](/Resources/Screenshot1.jpg)
 ![Profile Page](/Resources/Screenshot(170).jpg) -->
-<!-- Add more screenshots as needed -->
+<!-- Add more screenshots as needed-->
 
 ---
 
-<!-- ## Contributing
+## Contributing
 
 1. Fork the repository.
 2. Create a new branch: `git checkout -b feature/your-feature`
 3. Commit your changes.
-4. Push and open a pull request. -->
+4. Push and open a pull request.
 
 ---
 
