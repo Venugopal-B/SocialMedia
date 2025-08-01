@@ -1,0 +1,154 @@
+.login{
+   height: 100vh;
+   background-color: rgba(210, 203, 218, 0.824);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+    .card{
+        width: 50%;
+        display: flex;
+        background-color: white;
+        border-radius: 10px;
+        min-height: 550px;
+        overflow: hidden;
+        .left{
+            flex: 1;
+            background:linear-gradient(rgba(44, 42, 45, 0.662),rgba(48, 44, 51, 0.598)) ,url("https://images.pexels.com/photos/4353618/pexels-photo-4353618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center;
+            background-size: cover;
+            padding :50px; 
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            color: white;
+            justify-content: center;
+           
+           
+            
+            h1{
+               font-size: 75px;
+               line-height: 75px;
+
+            }
+
+
+            p{
+
+            }
+
+
+            span{
+              font-size: 18px;
+            }
+
+
+            button{
+                width: 50%;
+                padding: 10px;
+                border: none;
+                background-color:white;
+                color:rebeccapurple;
+                font-weight: bold;
+                cursor: pointer;
+            }
+             button:hover{
+                  background-color:#635ddf; 
+                  color: white;
+                }
+          
+        }
+        .right{
+            flex:1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content:center ;
+            gap: 50px;
+             h1{
+              color: #555;
+             }
+             form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+
+
+                input{
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    padding: 20px 10px;
+
+
+                }
+                button{
+                    width: 50%;
+                    padding: 10px;
+                    border: none;
+                    background-color: #938eef;
+                    color:white;
+                    font-weight: bold;
+                    cursor: pointer;
+                    
+   
+                }
+                button:hover{
+                  background-color:#635ddf; 
+                }
+             }
+             
+        }
+    }
+}
+
+@media (max-width: 900px) {
+  .login {
+    .card {
+      flex-direction: column;
+      width: 90vw;
+      min-width: 0;
+      .left, .right {
+        padding: 30px 20px;
+        h1 {
+          font-size: 40px;
+          line-height: 45px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .login {
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 0;
+    .card {
+      width: 95vw;
+      max-width: 400px;
+      margin: 0 auto;
+      min-height: unset;
+      border-radius: 10px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column; // Show right first, then left
+      .left, .right {
+        padding: 20px 10px;
+        gap: 15px;
+        h1 {
+          font-size: 28px;
+          line-height: 32px;
+        }
+      }
+      .right form input {
+        font-size: 14px;
+        padding: 8px 6px;
+      }
+      .right form button,
+      .left button {
+        width: 100%;
+        padding: 10px 0;
+      }
+    }
+  }
+}
