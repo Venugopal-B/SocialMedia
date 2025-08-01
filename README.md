@@ -98,8 +98,8 @@ npm start
 
 ## Screenshots
 
-![Home Page](/Resources/Screenshot1.jpg)
-![Profile Page](/Resources/Screenshot(170).jpg) -->
+![Home Page](/Resources/Screenshot-1.jpg)
+![Profile Page](/Resources/Screenshot-2.jpg) 
 <!-- Add more screenshots as needed-->
 
 ---
